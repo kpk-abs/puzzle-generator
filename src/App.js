@@ -1,6 +1,6 @@
 import { React } from 'react';
 import './App.scss';
-import Tile from './component/Tile';
+import Tile from './components/Tile';
 import normalizeConfig from './services/normalizeConfig';
 
 const App = (context) => {
@@ -10,7 +10,7 @@ const App = (context) => {
 		<Tile {
 			...{
 				...context,
-				data: { name: 'capsicum', value: 2 },
+				data: { name: 'capsicum', value: 2, variation: 'image' },
 				config: normalizedConfig,
 			}
 		}

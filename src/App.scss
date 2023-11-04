@@ -6,7 +6,11 @@
 	}
 }
 
+
+
 .tile {
+	display: flex;
+	.image {
 		background-image: url('./Images/sprite.png')
 	}
-
+}

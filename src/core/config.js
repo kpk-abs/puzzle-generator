@@ -1,6 +1,7 @@
 const config = {
 	size: 11,
 	columnCount: 5,
+	rowCount: 4,
 	sprite: [
 		{
 			name: 'capsicum',

@@ -12,12 +12,12 @@ const getBackgroundPosition = (context) => {
 };
 
 const getTileStyle = (context) => {
-	const { config: { size, columnCount }} = context;
+	const { config: { size, columnCount, rowCount }} = context;
 
 	return {
 		width: `${ size }vMin`,
 		height: `${ size }vMin`,
-		backgroundSize: `${ columnCount * hundred }%`,
+		backgroundSize: `${ columnCount * hundred }% ${ rowCount * hundred }%`,
 		backgroundPosition: getBackgroundPosition(context),
 	};
 };

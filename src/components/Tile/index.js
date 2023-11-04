@@ -1,10 +1,18 @@
 import React from 'react';
-import getTileStyle from './getTileStyle';
+import Item from './Item';
 
-const Tile = (context) =>
-	<div
-		className="tile"
-		style={ getTileStyle(context) }
-	/>;
+const tiles = {
+	image: Item,
+};
+
+const Tile = (context) => {
+	const { data: { variation }} = context;
+	const Component = tiles[variation];
+
+	return (
+		<div className="tile">
+			<Component { ...context }/>
+		</div>);
+};
 
 export default Tile;
