@@ -1,7 +1,7 @@
 const config = {
 	size: 11,
-	columns: 5,
-	imageDetails: [
+	columnCount: 5,
+	sprite: [
 		{
 			name: 'capsicum',
 			index: 5,
