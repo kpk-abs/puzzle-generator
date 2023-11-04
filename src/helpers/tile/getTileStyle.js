@@ -1,24 +1,17 @@
 const hundred = 100;
 
-const getBackgroundPosition = (context) => {
-	const { data: { name },
-		config: { columnCount, size, sprite }} = context;
-
-	const itemIndex = sprite.find((ele) => ele.name === name).index;
-	const x = itemIndex % columnCount;
-	const y = (itemIndex - x) / columnCount;
-
-	return `${ -x * size }vMin ${ -y * size }vMin`;
-};
+const getItem = ({ data: { name }, config: { sprite }}) =>
+	sprite.find(({ name: itemName }) => itemName === name);
 
 const getTileStyle = (context) => {
 	const { config: { size, columnCount, rowCount }} = context;
+	const { x, y } = getItem(context);
 
 	return {
 		width: `${ size }vMin`,
 		height: `${ size }vMin`,
 		backgroundSize: `${ columnCount * hundred }% ${ rowCount * hundred }%`,
-		backgroundPosition: getBackgroundPosition(context),
+		backgroundPosition: `${ -x }vmin ${ -y }vmin`,
 	};
 };
 

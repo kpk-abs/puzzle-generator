@@ -4,13 +4,13 @@ import Tile from './components/Tile';
 import normalizeConfig from './services/normalizeConfig';
 
 const App = (context) => {
-	const normalizedConfig = normalizeConfig(context);
+	const normalizedConfig = normalizeConfig.normalizeSprite(context);
 
 	return <div className="App">
 		<Tile {
 			...{
 				...context,
-				data: { name: 'capsicum', value: 2, variation: 'image' },
+				data: { name: 'carrot', value: 3, variation: 'image' },
 				config: normalizedConfig,
 			}
 		}
