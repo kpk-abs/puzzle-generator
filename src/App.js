@@ -1,6 +1,6 @@
 import { React } from 'react';
 import './App.scss';
-import Tile from './component/Tile';
+import Tile from './components/Tile';
 
 const App = (context) =>
 	<div className="App">
