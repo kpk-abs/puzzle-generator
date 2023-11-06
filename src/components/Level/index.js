@@ -7,11 +7,11 @@ const types = {
 	box: Box,
 };
 
-const Level = ({ items, type }) =>
+const Level = ({ items, ...context }) =>
 	items.map((prop, key) => {
-		const Component = types[type];
+		const Component = types[prop.type];
 
-		return <Component key={ key } { ...prop }/>;
+		return <Component key={ key } { ...{ data: prop, ...context } }/>;
 	});
 
 export default Level;
