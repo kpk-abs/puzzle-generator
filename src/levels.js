@@ -1,41 +1,31 @@
 const levels = {
 	level1: {
-		tiles: [
-			{
-				display: 'image',
-				value: 1,
-				group: 'a',
+		type: 'stack',
+		items: {
+			tile: {
+				count: 1,
+				variation: ['image'],
+				value: { min: 1, max: 1 },
+				group: ['a'],
 			},
-			{
-				display: 'image',
-				value: 1,
-				group: 'a',
+			boxes: {
+				value: { min: 1, max: 1 },
 			},
-		],
-		boxes: [
-			{
-				maxTiles: 2,
-			},
-		],
+		},
 	},
 	level2: {
-		tiles: [
-			{
-				display: 'image',
-				value: 1,
-				group: 'a',
+		type: 'stack',
+		items: {
+			tile: {
+				count: 2,
+				variation: ['image'],
+				value: { min: 1, max: 1 },
+				group: ['a'],
 			},
-			{
-				display: 'image',
-				value: 2,
-				group: 'b',
+			boxes: {
+				value: { min: 2, max: 2 },
 			},
-		],
-		boxes: [
-			{
-				maxTiles: 3,
-			},
-		],
+		},
 	},
 };
 
