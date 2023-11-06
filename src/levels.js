@@ -4,10 +4,12 @@ const levels = {
 			{
 				display: 'image',
 				value: 1,
+				group: 'a',
 			},
 			{
 				display: 'image',
 				value: 1,
+				group: 'a',
 			},
 		],
 		boxes: [
@@ -21,10 +23,12 @@ const levels = {
 			{
 				display: 'image',
 				value: 1,
+				group: 'a',
 			},
 			{
 				display: 'image',
 				value: 2,
+				group: 'b',
 			},
 		],
 		boxes: [
