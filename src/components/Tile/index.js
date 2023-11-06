@@ -1,8 +1,10 @@
 import React from 'react';
 import Item from './Item';
+import Number from './Number';
 
 const tiles = {
 	image: Item,
+	number: Number,
 };
 
 const Tile = (context) => {

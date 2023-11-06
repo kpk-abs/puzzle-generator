@@ -10,7 +10,7 @@ const App = (context) => {
 		<Tile {
 			...{
 				...context,
-				data: { name: 'carrot', value: 3, variation: 'image' },
+				data: { name: 'carrot', value: 3, variation: 'number' },
 				config: normalizedConfig,
 			}
 		}

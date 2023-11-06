@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=VT323&family=Wellfleet&display=swap');
+
 .App {
 	text-align: center;
 
@@ -6,11 +8,18 @@
 	}
 }
 
-
-
 .tile {
 	display: flex;
+	background-image: url('./Images/background.png');
+	width: 100vw;
+	height: 100vh;
+
 	.image {
 		background-image: url('./Images/sprite.png')
 	}
+	.number {
+		font-family: Cabin Sketch VT323 Wellfleet;
+		color: blueviolet;
+	}
 }
+
