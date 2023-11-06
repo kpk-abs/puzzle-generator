@@ -1,3 +1,5 @@
+import levels from '../levels';
+
 const config = {
 	size: 11,
 	columnCount: 5,
@@ -24,6 +26,9 @@ const config = {
 			index: 9,
 		},
 	],
+	data: {
+		levels,
+	},
 };
 
 export default config;
