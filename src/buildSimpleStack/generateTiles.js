@@ -1,14 +1,15 @@
-import { map, range } from '@laufire/utils/collection';
+import { map } from '@laufire/utils/collection';
 
-const generateTiles = ({ value }) => {
+const generateTiles = ({ tiles = [] }) => {
 	const name = 'pencil';
 	const type = 'tile';
 
 	return {
-		data: map(range(0, value), () => ({
-			name: name,
-			type: type,
-			value: 1,
+		data: map(tiles, ({ value, display }) => ({
+			name,
+			display,
+			type,
+			value,
 		})),
 	};
 };
