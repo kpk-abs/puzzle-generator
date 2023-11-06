@@ -5,9 +5,10 @@ const generateTiles = ({ tiles = [] }) => {
 	const type = 'tile';
 
 	return {
-		data: map(tiles, ({ value, display }) => ({
+		data: map(tiles, ({ value, display, group }) => ({
 			name,
 			display,
+			group,
 			type,
 			value,
 		})),
