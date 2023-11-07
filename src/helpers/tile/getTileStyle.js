@@ -1,11 +1,11 @@
-const hundred = 100;
+import { peek } from '@laufire/utils/debug';
+import getItem from './getItemIndex';
 
-const getItem = ({ data: { name }, config: { sprite }}) =>
-	sprite.find(({ name: itemName }) => itemName === name);
+const hundred = 100;
 
 const getTileStyle = (context) => {
 	const { config: { size, columnCount, rowCount }} = context;
-	const { x, y } = getItem(context);
+	const { x, y } = peek(getItem(context));
 
 	return {
 		width: `${ size }vMin`,

@@ -4,7 +4,7 @@ const config = {
 	tickerDelay: 1000,
 	size: 11,
 	columnCount: 5,
-	rowCount: 4,
+	rowCount: 6,
 	sprite: [
 		{
 			name: 'capsicum',
@@ -25,6 +25,24 @@ const config = {
 		{
 			name: 'brinjal',
 			index: 9,
+		},
+		{
+			index: 20,
+		},
+		{
+			index: 21,
+		},
+		{
+			index: 22,
+		},
+		{
+			index: 25,
+		},
+		{
+			index: 26,
+		},
+		{
+			index: 27,
 		},
 	],
 	data: {
