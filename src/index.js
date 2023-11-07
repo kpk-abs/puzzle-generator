@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import updateContext from '@laufire/resist';
 import './index.css';
 import App from './App';
@@ -14,7 +14,11 @@ const Entry = () => {
 	return App(context);
 };
 
-ReactDOM.render(<React.StrictMode>
-	<Entry/>
-</React.StrictMode>,
-document.getElementById('root'));
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+
+root.render(<React.StrictMode>
+		<Entry />
+</React.StrictMode>);
