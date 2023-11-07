@@ -1,17 +1,29 @@
-import { peek } from '@laufire/utils/debug';
 import getItem from './getItemIndex';
+import { rndBetween } from '@laufire/utils/random';
 
+const max = 360;
+const min = 0;
 const hundred = 100;
 
+const getColor = () => ({
+	filter: `hue-rotate(${ rndBetween(min, max) }deg)`,
+});
+
+const groups = {
+	a: {},
+	b: getColor(),
+};
+
 const getTileStyle = (context) => {
-	const { config: { size, columnCount, rowCount }} = context;
-	const { x, y } = peek(getItem(context));
+	const { config: { size, columnCount, rowCount }, data: { group }} = context;
+	const { x, y } = getItem(context);
 
 	return {
 		width: `${ size }vMin`,
 		height: `${ size }vMin`,
 		backgroundSize: `${ columnCount * hundred }% ${ rowCount * hundred }%`,
 		backgroundPosition: `${ -x }vmin ${ -y }vmin`,
+		...groups[group],
 	};
 };
 

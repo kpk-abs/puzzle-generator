@@ -14,11 +14,14 @@ const App = (context) => {
 
 	return <div className="App">
 		<Tile {
-			...{
-				...context,
-				data: { name: 'brinjal', value: 5, variation: 'dice' },
-				config: normalizedConfig,
-			}
+			...{ ...context,
+				data: {
+					value: 5,
+					variation: 'image',
+					image: 'brinjal',
+					group: 'a',
+				},
+				config: normalizedConfig }
 		}
 		/>
 	</div>;
