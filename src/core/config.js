@@ -1,6 +1,7 @@
 import levels from '../data/levels';
 
 const config = {
+	tickerDelay: 1000,
 	size: 11,
 	columnCount: 5,
 	rowCount: 4,
