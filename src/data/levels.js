@@ -1,28 +1,32 @@
 const levels = {
 	level1: {
+		name: 'level1',
 		type: 'stack',
 		items: {
 			tile: {
 				count: 1,
-				variation: ['image'],
+				variations: ['image'],
 				value: { min: 1, max: 1 },
-				group: ['a'],
+				groups: ['a', 'b', 'c'],
 			},
-			boxes: {
+			box: {
+				count: 1,
 				value: { min: 1, max: 1 },
 			},
 		},
 	},
 	level2: {
+		name: 'level2',
 		type: 'stack',
 		items: {
 			tile: {
 				count: 2,
-				variation: ['image'],
+				variations: ['image'],
 				value: { min: 1, max: 1 },
-				group: ['a'],
+				groups: ['a', 'b', 'c'],
 			},
-			boxes: {
+			box: {
+				count: 1,
 				value: { min: 2, max: 2 },
 			},
 		},
