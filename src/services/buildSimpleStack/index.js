@@ -1,4 +1,4 @@
-import { pipe } from '../helpers';
+import { pipe } from '../../helpers';
 import generateTiles from './generateTiles';
 import generateBox from './generateBox';
 
