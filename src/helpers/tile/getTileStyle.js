@@ -16,12 +16,12 @@ const groups = {
 
 const getTileStyle = (context) => {
 	const { config: { size, columnCount, rowCount }, data: { group }} = context;
-	const { x, y } = getItem(context);
+	const { x, y, variance: { width, height }} = getItem(context);
 
 	return {
-		width: `${ size }vMin`,
-		height: `${ size }vMin`,
-		backgroundSize: `${ columnCount * hundred }% ${ rowCount * hundred }%`,
+		width: `${ size * width }vMin`,
+		height: `${ size * height }vMin`,
+		backgroundSize: `${ (columnCount * hundred) / width }% ${ (rowCount * hundred) / height }%`,
 		backgroundPosition: `${ -x }vmin ${ -y }vmin`,
 		...groups[group],
 	};

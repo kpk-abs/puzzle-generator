@@ -16,14 +16,16 @@ const App = (context) => {
 	return <div className="App">
 		<Orientation lockOrientation="landscape">
 			<Tile {
-				...{
-					...context,
-					data: { name: 'brinjal', value: 5, variation: 'audio' },
-					config: normalizedConfig,
-				}
+				...{ ...context,
+					data: {
+						value: 1,
+						variation: 'image',
+						image: 'greenCapsicum',
+						group: 'a',
+					},
+					config: normalizedConfig }
 			}
-			/>
-		</Orientation>
+			/></Orientation>
 	</div>;
 };
 
