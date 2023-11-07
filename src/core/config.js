@@ -1,4 +1,4 @@
-import levels from '../levels';
+import levels from '../data/levels';
 
 const config = {
 	size: 11,
