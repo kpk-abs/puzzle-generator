@@ -27,21 +27,27 @@ const config = {
 			index: 9,
 		},
 		{
+			name: 1,
 			index: 20,
 		},
 		{
+			name: 2,
 			index: 21,
 		},
 		{
+			name: 3,
 			index: 22,
 		},
 		{
+			name: 4,
 			index: 25,
 		},
 		{
+			name: 5,
 			index: 26,
 		},
 		{
+			name: 6,
 			index: 27,
 		},
 	],
