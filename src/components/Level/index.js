@@ -7,8 +7,8 @@ const types = {
 	box: Box,
 };
 
-const Level = ({ items, ...context }) =>
-	items.map((prop, key) => {
+const Level = ({ data, ...context }) =>
+	data.map((prop, key) => {
 		const Component = types[prop.type];
 
 		return <Component key={ key } { ...{ data: prop, ...context } }/>;
