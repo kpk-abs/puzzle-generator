@@ -1,17 +1,26 @@
-import { map } from '@laufire/utils/collection';
+import { map, range } from '@laufire/utils/collection';
+import { rndBetween } from '@laufire/utils/lib';
+import { rndValue } from '@laufire/utils/random';
 
-const generateTiles = ({ tiles = [] }) => {
+const generateTiles = ({ tile }) => {
+	const { count, variations, value: { min, max }, groups } = tile;
 	const name = 'pencil';
 	const type = 'tile';
+	const variation = rndValue(variations);
+	const group = rndValue(groups);
 
 	return {
-		data: map(tiles, ({ value, display, group }) => ({
-			name,
-			display,
-			group,
-			type,
-			value,
-		})),
+		data: map(range(0, count), () => {
+			const value = rndBetween(min, max);
+
+			return {
+				name,
+				variation,
+				group,
+				type,
+				value,
+			};
+		}),
 	};
 };
 
