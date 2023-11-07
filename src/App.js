@@ -3,6 +3,7 @@ import './App.scss';
 import Tile from './components/Tile';
 import normalizeConfig from './services/normalizeConfig';
 import ticker from './services/ticker';
+import Orientation from 'react-web-components/Orientation';
 
 const App = (context) => {
 	const normalizedConfig = normalizeConfig.normalizeSprite(context);
@@ -13,17 +14,16 @@ const App = (context) => {
 	}, []);
 
 	return <div className="App">
-		<Tile {
-			...{ ...context,
-				data: {
-					value: 5,
-					variation: 'image',
-					image: 'brinjal',
-					group: 'a',
-				},
-				config: normalizedConfig }
-		}
-		/>
+		<Orientation lockOrientation="landscape">
+			<Tile {
+				...{
+					...context,
+					data: { name: 'brinjal', value: 5, variation: 'audio' },
+					config: normalizedConfig,
+				}
+			}
+			/>
+		</Orientation>
 	</div>;
 };
 
