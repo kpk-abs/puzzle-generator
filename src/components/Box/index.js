@@ -1,6 +1,6 @@
 import React from 'react';
 
 const Box = () =>
-	<div>Box</div>;
+	<div className="box"/>;
 
 export default Box;

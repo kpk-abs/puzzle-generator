@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { React, useEffect } from 'react';
 import './App.scss';
 import Tile from './components/Tile';
@@ -25,7 +26,8 @@ const App = (context) => {
 					},
 					config: normalizedConfig }
 			}
-			/></Orientation>
+			/>
+		</Orientation>
 	</div>;
 };
 
