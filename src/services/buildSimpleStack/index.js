@@ -1,10 +1,10 @@
 import { pipe } from '../../helpers';
 import generateTiles from './generateTiles';
-import generateBox from './generateBox';
+import generateBoxes from './generateBoxes';
 
 const buildSimpleStack = (context) => pipe([
 	generateTiles,
-	generateBox,
+	generateBoxes,
 ], context);
 
 export default buildSimpleStack;
