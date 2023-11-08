@@ -8,7 +8,6 @@ const Item = (context) => {
 	return map(range(0, value), (dummy, i) =>
 		<div
 			key={ i }
-			className="image"
 			style={ getTileStyle({ ...context, data: { value: image }}) }
 		/>);
 };

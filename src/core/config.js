@@ -1,4 +1,6 @@
 import levels from '../data/levels';
+import kids from '../Images/sprite.png';
+import cartoon from '../Images/cartoon.png';
 
 const config = {
 	tickerDelay: 1000,
@@ -114,6 +116,16 @@ const config = {
 	data: {
 		levels,
 	},
+	themes: [
+		{
+			label: 'kids',
+			url: kids,
+		},
+		{
+			label: 'cartoon',
+			url: cartoon,
+		},
+	],
 };
 
 export default config;

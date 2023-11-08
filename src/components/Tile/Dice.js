@@ -6,7 +6,6 @@ const Dice = (context) => {
 
 	return (
 		<div
-			className="image"
 			style={ getTileStyle({ ...context, data: { value, group }}) }
 		/>);
 };
