@@ -3,7 +3,7 @@ import { rndBetween } from '@laufire/utils/lib';
 import { rndValue } from '@laufire/utils/random';
 import { genID } from '../../helpers';
 
-export const genTiles = (tile) => {
+const genTiles = (tile) => {
 	const { count, variations, value: { min, max }, groups } = tile;
 	const name = 'pencil';
 	const type = 'tile';
@@ -17,3 +17,5 @@ export const genTiles = (tile) => {
 		return { id, name, variation, group, type, value };
 	});
 };
+
+export default genTiles;
