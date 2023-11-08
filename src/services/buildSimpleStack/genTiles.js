@@ -1,7 +1,7 @@
 import { map, range } from '@laufire/utils/collection';
 import { rndBetween } from '@laufire/utils/lib';
 import { rndValue } from '@laufire/utils/random';
-import { genID } from '../../helpers';
+import { generateID } from '../../helpers';
 
 const genTiles = (tile) => {
 	const { count, variations, value: { min, max }, groups } = tile;
@@ -12,7 +12,7 @@ const genTiles = (tile) => {
 
 	return map(range(0, count), () => {
 		const value = rndBetween(min, max);
-		const id = genID();
+		const id = generateID();
 
 		return { id, name, variation, group, type, value };
 	});
