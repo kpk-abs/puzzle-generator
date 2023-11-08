@@ -6,6 +6,14 @@ const actions = {
 	setScreen: ({ data }) => ({
 		screen: data,
 	}),
+
+	setAudio: ({ data }) => ({
+		audio: data,
+	}),
+
+	setMusic: ({ data }) => ({
+		music: data,
+	}),
 };
 
 export default actions;

@@ -4,6 +4,8 @@ const seed = {
 	currentLevel: '',
 	screen: 'HomeScreen',
 	theme: config.themes[0],
+	audio: true,
+	music: true,
 };
 
 export default seed;
