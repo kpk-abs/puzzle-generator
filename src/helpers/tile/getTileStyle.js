@@ -17,7 +17,7 @@ const groups = {
 const getTileStyle = (context) => {
 	const { config: { size, columnCount, rowCount },
 		data: { group }, state: { theme }} = context;
-	const { x, y, variance: { width, height }} = getItem(context);
+	const { x = 0, y = 0, variance: { width, height }} = getItem(context);
 
 	return {
 		width: `${ size * width }vMin`,
