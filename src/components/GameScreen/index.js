@@ -13,7 +13,7 @@ const GameScreen = (context) => {
 	const { state: { screen }} = context;
 	const Screen = screens[screen];
 
-	return <div><Screen { ...context }/></div>;
+	return <div className="gameScreen"><Screen { ...context }/></div>;
 };
 
 export default GameScreen;
