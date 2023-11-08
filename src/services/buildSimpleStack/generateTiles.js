@@ -1,4 +1,4 @@
-import { genTiles } from './genTiles';
+import genTiles from './genTiles';
 
 const generateTiles = ({ tile, tiles }) => ({
 	data: tiles || genTiles(tile),
