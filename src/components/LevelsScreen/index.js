@@ -1,10 +1,10 @@
 import { map, values } from '@laufire/utils/collection';
 import React from 'react';
 import Level from '../Level';
-import generateLevel from '../../generateLevel';
+import generateLevel from '../../services/generateLevel';
 import levels from '../../data/levels';
 
-const Levels = (context) => {
+const LevelsScreen = (context) => {
 	const { state: { currentLevel }, actions } = context;
 	const { data = [] } = currentLevel && generateLevel(currentLevel);
 
@@ -23,4 +23,4 @@ const Levels = (context) => {
 	return currentLevel ? levelComponent : levelElements;
 };
 
-export default Levels;
+export default LevelsScreen;

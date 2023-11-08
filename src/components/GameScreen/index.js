@@ -1,10 +1,10 @@
 import React from 'react';
-import Levels from '../Levels/index.js';
+import LevelsScreen from '../LevelsScreen/index.js';
 import HomeScreen from '../HomeScreen/index.js';
 
 const screens = {
-	LevelsScreen: Levels,
-	HomeScreen: HomeScreen,
+	LevelsScreen,
+	HomeScreen,
 };
 
 const GameScreen = (context) => {
