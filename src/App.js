@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 import { React, useEffect } from 'react';
 import './App.scss';
 import ticker from './services/ticker';
