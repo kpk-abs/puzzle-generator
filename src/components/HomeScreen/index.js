@@ -1,6 +1,6 @@
 import React from 'react';
-import PlayButton from '../PlayButton/index.js';
-import SettingButton from '../SettingButton/index.js';
+import PlayButton from './PlayButton/index.js';
+import SettingButton from './SettingButton/index.js';
 
 const HomeScreen = (context) =>
 	<div>
