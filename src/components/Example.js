@@ -3,7 +3,7 @@ import Tile from './Tile';
 import normalizeConfig from '../services/normalizeConfig';
 
 const Example = (context) => {
-	const normalizedConfig = normalizeConfig(context);
+	const normalizedConfig = normalizeConfig.normalizeSprite(context);
 
 	return (
 		<Tile { ...{
