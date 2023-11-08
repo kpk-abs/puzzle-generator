@@ -10,9 +10,7 @@
 
 .tile {
 	display: flex;
-	background-image: url('./Images/background.png');
-	width: 100vw;
-	height: 100vh;
+
 
 	.image {
 		background-image: url('./Images/sprite.png')
@@ -40,6 +38,11 @@
 }
 
 .gameScreen {
+	width: 100%;
+	height: 100%;
+}
+
+.board {
 	width: 100%;
 	height: 100%;
 }
