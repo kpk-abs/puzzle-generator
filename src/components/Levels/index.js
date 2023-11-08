@@ -2,15 +2,16 @@ import { map, values } from '@laufire/utils/collection';
 import React from 'react';
 import Level from '../Level';
 import generateLevel from '../../generateLevel';
+import levels from '../../data/levels';
 
-const Levels = ({ levels, ...context }) => {
-	const { state: { currentLevel }} = context;
+const Levels = (context) => {
+	const { state: { currentLevel }, actions } = context;
 	const { data = [] } = currentLevel && generateLevel(currentLevel);
 
 	const levelElements = values(map(levels, ({ name }, key) =>
 		<div
 			key={ key }
-			onClick={ () => { context.actions.setCurrentLevel(key); } }
+			onClick={ () => { actions.setCurrentLevel(key); } }
 		>
 			{ name }
 		</div>));
