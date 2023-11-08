@@ -14,6 +14,10 @@ const actions = {
 	setMusic: ({ data }) => ({
 		music: data,
 	}),
+
+	setTheme: ({ data }) => ({
+		theme: data,
+	}),
 };
 
 export default actions;

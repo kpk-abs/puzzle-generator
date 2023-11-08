@@ -118,11 +118,13 @@ const config = {
 	},
 	themes: [
 		{
-			label: 'kids',
+			label: 'Kids',
+			value: 'kids',
 			url: kids,
 		},
 		{
-			label: 'cartoon',
+			label: 'Cartoon',
+			value: 'cartoon',
 			url: cartoon,
 		},
 	],
