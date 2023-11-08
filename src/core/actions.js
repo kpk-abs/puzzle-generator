@@ -3,12 +3,8 @@ const actions = {
 		currentLevel: data,
 	}),
 
-	setPlaying: () => ({
-		playing: 'start',
-	}),
-
-	setSetting: () => ({
-		setting: 'start',
+	setScreen: ({ data }) => ({
+		screen: data,
 	}),
 };
 

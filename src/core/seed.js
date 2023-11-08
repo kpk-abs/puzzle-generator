@@ -1,7 +1,6 @@
 const seed = {
 	currentLevel: '',
-	playing: 'stop',
-	setting: 'stop',
+	screen: 'HomeScreen',
 };
 
 export default seed;

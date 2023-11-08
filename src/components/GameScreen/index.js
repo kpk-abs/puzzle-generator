@@ -1,11 +1,17 @@
 import React from 'react';
-import PlayButton from '../PlayButton.js';
-import SettingButton from '../SettingButton/index.js';
+import Levels from '../Levels/index.js';
+import HomeScreen from '../HomeScreen/index.js';
 
-const GameScreen = (context) =>
-	<div>
-		<PlayButton { ...context }/>
-		<SettingButton { ...context }/>
-	</div>;
+const screens = {
+	LevelsScreen: Levels,
+	HomeScreen: HomeScreen,
+};
+
+const GameScreen = (context) => {
+	const { state: { screen }} = context;
+	const Screen = screens[screen];
+
+	return <div><Screen { ...context }/></div>;
+};
 
 export default GameScreen;
