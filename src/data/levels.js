@@ -7,7 +7,7 @@ const levels = {
 				count: 1,
 				variations: ['image'],
 				value: { min: 1, max: 1 },
-				groups: ['a', 'b', 'c'],
+				groups: ['a'],
 			},
 			box: {
 				count: 1,
@@ -24,7 +24,7 @@ const levels = {
 				count: 2,
 				variations: ['image'],
 				value: { min: 1, max: 1 },
-				groups: ['a', 'b', 'c'],
+				groups: ['a'],
 			},
 			box: {
 				count: 1,
