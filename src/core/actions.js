@@ -6,6 +6,10 @@ const actions = {
 	setPlaying: () => ({
 		playing: 'start',
 	}),
+
+	setSetting: () => ({
+		setting: 'start',
+	}),
 };
 
 export default actions;
