@@ -6,6 +6,9 @@ const pipe = (pipes, data) => reduce(
 	), data,
 );
 
+const generateID = Symbol;
+
 export {
 	pipe,
+	generateID,
 };
