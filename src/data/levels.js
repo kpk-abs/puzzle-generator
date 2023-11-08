@@ -12,6 +12,7 @@ const levels = {
 			box: {
 				count: 1,
 				value: { min: 1, max: 1 },
+				items: [],
 			},
 		},
 	},
@@ -28,6 +29,7 @@ const levels = {
 			box: {
 				count: 1,
 				value: { min: 2, max: 2 },
+				items: [],
 			},
 		},
 	},
