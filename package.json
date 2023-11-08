@@ -26,7 +26,9 @@
     "eject": "react-scripts eject",
     "test-dev": "react-scripts test --watchAll=false",
     "test-ci": "npm run test-dev -- --coverage",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -59,13 +61,27 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-interactions": "^7.5.3",
+    "@storybook/addon-links": "^7.5.3",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.5.3",
+    "@storybook/preset-create-react-app": "^7.5.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/react-webpack5": "^7.5.3",
+    "@storybook/testing-library": "^0.2.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "eslint": "^8.37.0",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-storybook": "^0.6.15",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "sass": "^1.54.5"
+    "prop-types": "^15.8.1",
+    "sass": "^1.54.5",
+    "storybook": "^7.5.3",
+    "webpack": "^5.89.0"
   },
   "main": "index.js",
   "license": "ISC",
@@ -86,5 +102,10 @@
     "boilerplate",
     "template",
     "resist"
-  ]
+  ],
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
 }
