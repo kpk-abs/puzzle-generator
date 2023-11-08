@@ -1,6 +1,6 @@
 import { map, values } from '@laufire/utils/collection';
 import React from 'react';
-import Level from '../Level';
+import Level from './Level';
 import generateLevel from '../../services/generateLevel';
 import levels from '../../data/levels';
 

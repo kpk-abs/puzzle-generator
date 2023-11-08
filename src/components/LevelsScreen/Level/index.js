@@ -1,6 +1,6 @@
 import React from 'react';
-import Tile from '../Tile';
-import Box from '../Box';
+import Tile from '../../Tile';
+import Box from '../../Box';
 
 const types = {
 	tile: Tile,
