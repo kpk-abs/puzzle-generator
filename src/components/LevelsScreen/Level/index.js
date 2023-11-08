@@ -1,17 +1,7 @@
 import React from 'react';
-import Tile from '../../Tile';
-import Box from '../../Box';
+import Board from '../Board';
 
-const types = {
-	tile: Tile,
-	box: Box,
-};
-
-const Level = ({ data, ...context }) =>
-	data.map((prop, key) => {
-		const Component = types[prop.type];
-
-		return <Component key={ key } { ...{ data: prop, ...context } }/>;
-	});
+const Level = (context) =>
+	<Board { ...context }/>;
 
 export default Level;
