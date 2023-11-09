@@ -1,5 +1,5 @@
 import { rndBetween } from '@laufire/utils/lib';
-import { generateID } from '../../helpers';
+import { generateID } from '../../../helpers';
 
 const genTile = ({ variation, group, value: { min, max }}) => {
 	const name = 'carrot';
