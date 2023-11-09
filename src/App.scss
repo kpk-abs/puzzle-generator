@@ -45,8 +45,14 @@
 .board {
 	width: 100%;
 	height: 100%;
+
+	.boardContainer {
+		border: 10px solid rgb(255, 138, 138);
+		box-sizing: border-box;
+		margin: auto;
+	}
 }
 
 .boardItem {
-	position: absolute;
+	position: relative;
 }
