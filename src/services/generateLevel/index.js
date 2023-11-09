@@ -1,5 +1,5 @@
-import config from '../core/config';
-import buildSimpleStack from './buildSimpleStack';
+import config from '../../core/config';
+import buildSimpleStack from '../buildSimpleStack';
 
 const actions = {
 	stack: buildSimpleStack,

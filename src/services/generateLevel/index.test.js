@@ -1,5 +1,5 @@
 import { peek } from '@laufire/utils/debug';
-import generateLevel from './generateLevel';
+import generateLevel from '.';
 
 describe('generateLevel', () => {
 	test('call', () => {
