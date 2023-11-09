@@ -2,7 +2,6 @@ import React from 'react';
 import Item from '../components/Tile';
 import normalizeConfig from '../services/normalizeConfig';
 import context from '../core/context';
-import '../App.scss';
 
 const normalizedConfig = normalizeConfig.normalizeSprite(context);
 
