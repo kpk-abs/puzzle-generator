@@ -1,14 +1,9 @@
 import React from 'react';
 import TextToSpeech from 'react-web-components/TextToSpeech';
-import AudioImage from '../../Images/Audio.png';
+import getAudioStyle from '../../helpers/tile/getAudioStyle';
+import { rndBetween } from '@laufire/utils/random';
 
-const getAudioStyle = (size) => ({
-	width: `${ size }vMin`,
-	height: `${ size }vMin`,
-	backgroundSize: 'cover',
-	borderRadius: '50%',
-	backgroundImage: `url(${ AudioImage })`,
-});
+const limit = 100;
 
 const Audio = (context) => {
 	const { data: { value }, config: { size }} = context;
@@ -17,6 +12,7 @@ const Audio = (context) => {
 		<TextToSpeech { ...{
 			value: value,
 			style: { ...getAudioStyle(size) },
+			voice: rndBetween(0, limit),
 		} }
 		/>);
 };
