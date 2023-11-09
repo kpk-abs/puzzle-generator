@@ -17,7 +17,7 @@ const Drag = ({ children, item }) => {
 	return (
 		<div
 			ref={ drag }
-			className="tile"
+			className={ `drag-${ item.type }` }
 			style={ {
 				cursor: 'move',
 			} }
