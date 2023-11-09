@@ -1,6 +1,7 @@
 import React from 'react';
 import IconButton from 'react-web-components/IconButton';
 import Themes from './Themes';
+import BackButton from '../BackButton';
 
 const SettingScreen = (context) => {
 	const { actions, state: { audio, music }} = context;
@@ -17,6 +18,7 @@ const SettingScreen = (context) => {
 		} }
 		/>
 		<Themes { ...context }/>
+		<BackButton { ...context }/>
 	</div>;
 };
 
