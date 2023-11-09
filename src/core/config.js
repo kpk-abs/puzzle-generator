@@ -6,7 +6,7 @@ const config = {
 	tickerDelay: 1000,
 	size: 11,
 	columnCount: 5,
-	rowCount: 8,
+	rowCount: 11,
 	sprite: [
 		{
 			name: 'capsicum',
