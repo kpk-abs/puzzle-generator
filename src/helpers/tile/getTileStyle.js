@@ -1,3 +1,4 @@
+import { find } from '@laufire/utils/collection';
 import getItem from './getItemIndex';
 import { rndBetween } from '@laufire/utils/random';
 
@@ -15,15 +16,16 @@ const groups = {
 };
 
 const getTileStyle = (context) => {
-	const { config: { size, columnCount, rowCount },
+	const { config: { size, columnCount, rowCount, themes },
 		data: { group }, state: { theme }} = context;
 	const { x, y,
 		variance: { width, height }} = getItem(context);
+	const { url } = find(themes, ({ value }) => theme === value);
 
 	return {
 		width: `${ size * width }vMin`,
 		height: `${ size * height }vMin`,
-		backgroundImage: `url(${ theme.url })`,
+		backgroundImage: `url(${ url })`,
 		backgroundSize: `${ (columnCount * hundred) / width }% ${ (rowCount * hundred) / height }%`,
 		backgroundPosition: `${ -x }vmin ${ -y }vmin`,
 		...groups[group],
