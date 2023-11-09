@@ -2,7 +2,14 @@ import levels from '../data/levels';
 import kids from '../Images/sprite.png';
 import cartoon from '../Images/cartoon.png';
 
+const width = 16;
+const height = 9;
+
 const config = {
+	ratioMultiplier: {
+		width: height / width,
+		height: 1,
+	},
 	tickerDelay: 1000,
 	size: 11,
 	columnCount: 5,
