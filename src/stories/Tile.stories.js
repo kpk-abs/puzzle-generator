@@ -1,9 +1,6 @@
 import React from 'react';
 import Item from '../components/Tile';
-import normalizeConfig from '../services/normalizeConfig';
-import context from '../core/context';
-
-const normalizedConfig = normalizeConfig.normalizeSprite(context);
+import context from './helper/context';
 
 const component = {
 	title: 'Components/Tile',
@@ -25,8 +22,7 @@ const Template = (args) => {
 
 	return (
 		<Item { ...{
-			...context, config: normalizedConfig,
-			state: context.seed, data: tile,
+			...context, data: tile,
 		} }
 		/>);
 };
