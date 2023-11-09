@@ -20,7 +20,6 @@ const Drag = ({ children, item }) => {
 			className="tile"
 			style={ {
 				cursor: 'move',
-				opacity: isDragging ? 0 : 1,
 			} }
 		>
 			{children}

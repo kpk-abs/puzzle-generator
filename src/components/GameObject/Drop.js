@@ -1,9 +1,8 @@
-/* eslint-disable max-lines-per-function */
 import { peek } from '@laufire/utils/debug';
 import React from 'react';
 import { useDrop } from 'react-dnd';
 
-const Drop = ({ children, style, acceptType, item: drop }) => {
+const Drop = ({ children, acceptType, item: drop }) => {
 	const [{ isOver }, dropRef] = useDrop({
 		accept: acceptType,
 		drop: (drag) => {
@@ -14,17 +13,7 @@ const Drop = ({ children, style, acceptType, item: drop }) => {
 		}),
 	});
 
-	return (
-		<div
-			ref={ dropRef }
-			style={ {
-				backgroundColor: isOver ? 'lightgreen' : 'white',
-				...style,
-			} }
-		>
-			{children}
-		</div>
-	);
+	return <div ref={ dropRef }>{children}</div>;
 };
 
 export default Drop;
