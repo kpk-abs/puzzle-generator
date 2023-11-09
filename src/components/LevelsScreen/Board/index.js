@@ -14,7 +14,7 @@ const Board = ({ data, ...context }) =>
 					<div
 						key={ key }
 						className="boardItem"
-						style={ { left: `${ x }vmin`, top: `${ y }vmin` } }
+						style={ { left: `${ x }%`, top: `${ y }%` } }
 					>
 						<GameObject { ...{ ...context, data: prop } }/>
 					</div>);
