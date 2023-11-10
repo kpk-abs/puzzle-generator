@@ -10,14 +10,17 @@ const LevelsScreen = (context) => {
 	const { data = [] } = currentLevel && generateLevel(currentLevel);
 
 	const levelElements = <div>
-		{values(map(levels, ({ name }, key) =>
-			<div
-				key={ key }
-				onClick={ () => { actions.setCurrentLevel(key); } }
-			>
-				{ name }
-			</div>))}
-		<BackButton { ...context }/>
+		<div className="levels">
+			<div className="levelContainer">
+				{values(map(levels, ({ label }, key) =>
+					<button
+						key={ key }
+						onClick={ () => { actions.setCurrentLevel(key); } }
+					>
+						{ label }
+					</button>))}
+			</div>
+		</div><BackButton { ...context }/>
 	</div>;
 
 	const levelProps = { ...context, data };

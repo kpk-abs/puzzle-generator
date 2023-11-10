@@ -1,5 +1,6 @@
 const levels = {
 	level1: {
+		label: 1,
 		name: 'level1',
 		type: 'stack',
 		items: {
@@ -17,6 +18,7 @@ const levels = {
 		},
 	},
 	level2: {
+		label: 2,
 		name: 'level2',
 		type: 'stack',
 		items: {

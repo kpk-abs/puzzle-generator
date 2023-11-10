@@ -56,3 +56,30 @@
 .boardItem {
 	position: relative;
 }
+
+
+.levels {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: 50%;
+	border: 2px solid burlywood;
+
+
+	.levelContainer {
+		margin: auto;
+		display: flex;
+			button {
+				background-image: url('./Images/sprite.png');
+				background-size: 500% 1200%;
+				background-position: 0vmin -121vmin;
+				border: none;
+				width: 11vmin;
+				height: 11vmin;
+				background-color: transparent;
+				color: whitesmoke;
+					}
+	}
+}

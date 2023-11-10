@@ -16,7 +16,7 @@ const groups = {
 };
 
 const getTileStyle = (context) => {
-	const { config: { size, columnCount, rowCount, themes },
+	const { config: { size, columnCount, themes },
 		data: { group }, state: { theme }} = context;
 	const { x, y,
 		variance: { width, height }} = getItem(context);
@@ -26,7 +26,7 @@ const getTileStyle = (context) => {
 		width: `${ size * width }vMin`,
 		height: `${ size * height }vMin`,
 		backgroundImage: `url(${ url })`,
-		backgroundSize: `${ (columnCount * hundred) / width }% ${ (rowCount * hundred) / height }%`,
+		backgroundSize: `${ (columnCount * hundred) / width }%`,
 		backgroundPosition: `${ -x }vmin ${ -y }vmin`,
 		...groups[group],
 	};
