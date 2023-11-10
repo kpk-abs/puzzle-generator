@@ -3,9 +3,9 @@ import React from 'react';
 import GameObject from '../GameObject';
 
 const Box = (context) => {
-	const { data: { items }} = context;
+	const { data: { items, rotation = 0 }} = context;
 
-	return <div className="box" style={ { display: 'flex' } }>
+	return <div className="box" style={ { transform: `rotate(${ rotation }deg)` } }>
 		{map(items, (item, key) =>
 			<GameObject key={ key } { ...{ ...context, data: item } }/>)}
 	</div>;
