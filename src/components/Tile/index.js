@@ -7,12 +7,14 @@ import Dice from './Dice';
 import MediaPlayer from 'react-web-components/MediaPlayer';
 import dragAudio from '../../assets/drag1.mp3';
 import { peek } from '@laufire/utils/debug';
+import Line from './Line';
 
 const tiles = {
 	image: Item,
 	number: Number,
 	audio: Audio,
 	dice: Dice,
+	line: Line,
 };
 
 const Tile = (context) => {

@@ -1,9 +1,9 @@
-import { Button } from '@mui/material';
 import React from 'react';
 
 const BackButton = ({ actions }) =>
-	<Button onClick={ () => actions.setScreen('HomeScreen') }>
-		Back
-	</Button>;
+	<button
+		className="gameButton back"
+		onClick={ () => actions.setScreen('HomeScreen') }
+	/>;
 
 export default BackButton;

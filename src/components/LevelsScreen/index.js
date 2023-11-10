@@ -15,13 +15,13 @@ const LevelsScreen = (context) => {
 				{values(map(levels, ({ label }, key) =>
 					<button
 						key={ key }
+						className="gameButton level"
 						onClick={ () => { actions.setCurrentLevel(key); } }
 					>
 						{ label }
 					</button>))}
 			</div>
-		</div><BackButton { ...context }/>
-	</div>;
+		</div><BackButton { ...context }/></div>;
 
 	const levelProps = { ...context, data };
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button } from '@mui/material';
 
 const PlayButton = ({ actions }) =>
-	<Button onClick={ () => { actions.setScreen('LevelsScreen'); } }>
-		PlayButton
-	</Button>;
+	<button
+		className="gameButton play"
+		onClick={ () => { actions.setScreen('LevelsScreen'); } }
+	/>;
 
 export default PlayButton;

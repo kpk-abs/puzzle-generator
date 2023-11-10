@@ -68,18 +68,34 @@
 	height: 50%;
 	border: 2px solid burlywood;
 
-
 	.levelContainer {
 		margin: auto;
 		display: flex;
-			button {
-				background-image: url('./Images/sprite.png');
-				background-size: 500% 1300%;
+			.level {
 				background-position: 0vmin -121vmin;
-				border: none;
-				width: 11vmin;
-				height: 11vmin;
-				background-color: transparent;
 					}
 	}
 }
+
+.gameButton {
+	background-image: url('./Images/sprite.png');
+	background-size: 500% 1300%;
+	border: none;
+	width: 11vmin;
+	height: 11vmin;
+	background-color: transparent;
+}
+.play {
+	background-position: -22vmin -121vmin;
+		}
+
+.settings {
+	background-position: -44vmin -121vmin;
+		}
+
+.back {
+	position: absolute;
+	left: 10%;
+	top: 80%;
+	background-position: -11vmin -121vmin;
+		}
