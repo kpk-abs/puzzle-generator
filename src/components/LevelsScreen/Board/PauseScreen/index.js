@@ -3,6 +3,7 @@ import Levels from './Levels';
 import RestartLevel from '../../RestartLevel';
 import { Backdrop } from '@mui/material';
 import Home from './Home';
+import Play from './Play';
 
 const PauseScreen = (context) => {
 	const { actions, state: { pause }} = context;
@@ -16,6 +17,7 @@ const PauseScreen = (context) => {
 			<Levels { ...context }/>
 			<RestartLevel { ...context }/>
 			<Home { ...context }/>
+			<Play { ...context }/>
 		</Backdrop>
 	);
 };
