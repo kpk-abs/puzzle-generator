@@ -1,7 +1,10 @@
 import config from '../core/config';
 
 const seed = {
-	currentLevel: '',
+	level: {
+		name: '',
+		data: [],
+	},
 	screen: 'HomeScreen',
 	theme: config.themes[0].value,
 	audio: true,

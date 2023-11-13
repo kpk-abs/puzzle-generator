@@ -1,6 +1,8 @@
+import gameManager from '../services/gameManager';
+
 const actions = {
-	setCurrentLevel: ({ data }) => ({
-		currentLevel: data,
+	setLevel: (context) => ({
+		level: gameManager.getLevel(context),
 	}),
 
 	setScreen: ({ data }) => ({
