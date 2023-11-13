@@ -1,9 +1,15 @@
 import React from 'react';
+import getStyle from '../../../helpers/getStyle.js';
 
-const PlayButton = ({ actions }) =>
-	<button
-		className="gameButton play"
-		onClick={ () => { actions.setScreen('LevelsScreen'); } }
-	/>;
+const PlayButton = (context) => {
+	const { actions } = context;
+
+	return (
+		<button
+			className="gameButton"
+			style={ getStyle({ ...context, data: { value: 'play' }}) }
+			onClick={ () => { actions.setScreen('LevelsScreen'); } }
+		/>);
+};
 
 export default PlayButton;

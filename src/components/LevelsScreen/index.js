@@ -4,6 +4,7 @@ import Level from './Level';
 import generateLevel from '../../services/generateLevel';
 import levels from '../../data/levels';
 import BackButton from '../BackButton';
+import getStyle from '../../helpers/getStyle';
 
 const LevelsScreen = (context) => {
 	const { state: { currentLevel }, actions } = context;
@@ -15,11 +16,11 @@ const LevelsScreen = (context) => {
 				{values(map(levels, ({ label }, key) =>
 					<button
 						key={ key }
-						className="gameButton level"
+						className="gameButton"
+						style={ getStyle({ ...context,
+							data: { value: 'level' }}) }
 						onClick={ () => { actions.setCurrentLevel(key); } }
-					>
-						{ label }
-					</button>))}
+					>{ label }</button>))}
 			</div>
 		</div><BackButton { ...context }/></div>;
 

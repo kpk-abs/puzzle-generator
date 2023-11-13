@@ -119,6 +119,70 @@ const config = {
 				height: 1,
 			},
 		},
+		{
+			name: 'level',
+			index: 55,
+			variance: {
+				width: 1,
+				height: 1,
+			},
+		},
+		{
+			name: 'back',
+			index: 56,
+			variance: {
+				width: 1,
+				height: 1,
+			},
+		},
+		{
+			name: 'play',
+			index: 57,
+			variance: {
+				width: 1,
+				height: 1,
+			},
+		},
+		{
+			name: 'musicOn',
+			index: 58,
+			variance: {
+				width: 1,
+				height: 1,
+			},
+		},
+		{
+			name: 'setting',
+			index: 59,
+			variance: {
+				width: 1,
+				height: 1,
+			},
+		},
+		{
+			name: 'audioOn',
+			index: 60,
+			variance: {
+				width: 1,
+				height: 1,
+			},
+		},
+		{
+			name: 'audioOff',
+			index: 61,
+			variance: {
+				width: 1,
+				height: 1,
+			},
+		},
+		{
+			name: 'musicOff',
+			index: 62,
+			variance: {
+				width: 1,
+				height: 1,
+			},
+		},
 	],
 	data: {
 		levels,

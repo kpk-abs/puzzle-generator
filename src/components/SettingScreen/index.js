@@ -1,23 +1,30 @@
 import React from 'react';
-import IconButton from 'react-web-components/IconButton';
 import Themes from './Themes';
 import BackButton from '../BackButton';
+import getStyle from '../../helpers/getStyle';
+
+const getBackground = (music) => (music ? 'musicOn' : 'musicOff');
+
+const getAudio = (audio) => (audio ? 'audioOn' : 'audioOff');
 
 const SettingScreen = (context) => {
 	const { actions, state: { audio, music }} = context;
 
 	return <div>
-		<IconButton { ...{
-			icon: audio ? 'VolumeUp' : 'VolumeOff',
+		<button { ...{
+			className: 'gameButton',
+			style: { ...getStyle({ ...context,
+				data: { value: getBackground(audio) }}) },
 			onClick: () => { actions.setAudio(!audio); },
 		} }
 		/>
-		<IconButton { ...{
-			icon: music ? 'MusicNote' : 'MusicOff',
+		<button { ...{
+			className: 'gameButton',
+			style: { ...getStyle({ ...context,
+				data: { value: getAudio(music) }}) },
 			onClick: () => { actions.setMusic(!music); },
 		} }
-		/>
-		<Themes { ...context }/>
+		/><Themes { ...context }/>
 		<BackButton { ...context }/>
 	</div>;
 };
