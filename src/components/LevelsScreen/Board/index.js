@@ -1,6 +1,7 @@
 import React from 'react';
 import GameObject from '../../GameObject';
 import background from '../../../Images/background.png';
+import Pause from './Pause';
 
 const BoardItems = (context) =>
 	context.data.map((prop, key) => {
@@ -24,6 +25,7 @@ const Board = (context) => {
 			className="board"
 			style={ { background: `url(${ background })` } }
 		>
+			<Pause { ...context }/>
 			<div
 				className="boardContainer"
 				style={ {

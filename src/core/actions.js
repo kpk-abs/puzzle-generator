@@ -20,6 +20,10 @@ const actions = {
 	setTheme: ({ data }) => ({
 		theme: data,
 	}),
+
+	setPause: ({ data }) => ({
+		pause: data,
+	}),
 };
 
 export default actions;
