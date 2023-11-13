@@ -8,7 +8,7 @@ const SettingButton = (context) => {
 		<button
 			className="gameButton"
 			style={ getStyle({ ...context, data: { value: 'setting' }}) }
-			onClick={ () => { actions.setScreen('SettingScreen'); } }
+			onClick={ () => { actions.setScreen('setting'); } }
 		/>);
 };
 

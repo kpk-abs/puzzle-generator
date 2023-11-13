@@ -8,7 +8,7 @@ const PlayButton = (context) => {
 		<button
 			className="gameButton"
 			style={ getStyle({ ...context, data: { value: 'play' }}) }
-			onClick={ () => { actions.setScreen('LevelsScreen'); } }
+			onClick={ () => { actions.setScreen('levels'); } }
 		/>);
 };
 

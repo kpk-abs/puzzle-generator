@@ -8,7 +8,7 @@ const BackButton = (context) => {
 		<button
 			className="gameButton back"
 			style={ getStyle({ ...context, data: { value: 'back' }}) }
-			onClick={ () => actions.setScreen('HomeScreen') }
+			onClick={ () => actions.setScreen('home') }
 		/>);
 };
 

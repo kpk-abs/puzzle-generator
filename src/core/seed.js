@@ -5,7 +5,7 @@ const seed = {
 		name: '',
 		data: [],
 	},
-	screen: 'HomeScreen',
+	screen: 'home',
 	theme: config.themes[0].value,
 	audio: true,
 	music: true,

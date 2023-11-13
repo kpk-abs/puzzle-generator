@@ -4,9 +4,9 @@ import HomeScreen from '../HomeScreen';
 import SettingScreen from '../SettingScreen';
 
 const screens = {
-	LevelsScreen,
-	HomeScreen,
-	SettingScreen,
+	levels: LevelsScreen,
+	home: HomeScreen,
+	setting: SettingScreen,
 };
 
 const GameScreen = (context) => {
