@@ -2,6 +2,7 @@ import React from 'react';
 import GameObject from '../../GameObject';
 import background from '../../../Images/background.png';
 import Pause from './Pause';
+import PauseScreen from './PauseScreen';
 
 const BoardItems = (context) =>
 	context.data.map((prop, key) => {
@@ -17,26 +18,30 @@ const BoardItems = (context) =>
 			</div>);
 	});
 
-const Board = (context) => {
+const BoardContainer = (context) => {
 	const { config: { ratioMultiplier: { width, height }}} = context;
 
 	return (
 		<div
-			className="board"
-			style={ { background: `url(${ background })` } }
+			className="boardContainer"
+			style={ {
+				width: `calc(100dvw * ${ width })`,
+				height: `calc(100dvh * ${ height })`,
+			} }
 		>
-			<Pause { ...context }/>
-			<div
-				className="boardContainer"
-				style={ {
-					width: `calc(100dvw * ${ width })`,
-					height: `calc(100dvh * ${ height })`,
-				} }
-			>
-				<BoardItems { ...context }/>
-			</div>
+			<BoardItems { ...context }/>
 		</div>
 	);
 };
+
+const Board = (context) =>
+	<div
+		className="board"
+		style={ { background: `url(${ background })` } }
+	>
+		<Pause { ...context }/>
+		<PauseScreen { ...context }/>
+		<BoardContainer { ...context }/>
+	</div>;
 
 export default Board;
