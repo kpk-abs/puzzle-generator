@@ -1,6 +1,6 @@
 import React from 'react';
-import LevelsScreen from '../LevelsScreen/index.js';
-import HomeScreen from '../HomeScreen/index.js';
+import LevelsScreen from '../LevelsScreen';
+import HomeScreen from '../HomeScreen';
 import SettingScreen from '../SettingScreen';
 
 const screens = {

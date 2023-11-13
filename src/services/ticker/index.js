@@ -5,7 +5,7 @@ const ticker = (context) => {
 
 	masterLoop.runMasterLoop(context);
 
-	return setInterval(() => {
+	setInterval(() => {
 		masterLoop.runMasterLoop(context);
 	}, tickerDelay);
 };
