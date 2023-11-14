@@ -144,7 +144,7 @@ const config = {
 			},
 		},
 		{
-			name: 'musicOn',
+			name: 'pause',
 			index: 58,
 			variance: {
 				width: 1,
@@ -176,8 +176,16 @@ const config = {
 			},
 		},
 		{
-			name: 'musicOff',
+			name: 'musicOn',
 			index: 62,
+			variance: {
+				width: 1,
+				height: 1,
+			},
+		},
+		{
+			name: 'musicOff',
+			index: 63,
 			variance: {
 				width: 1,
 				height: 1,

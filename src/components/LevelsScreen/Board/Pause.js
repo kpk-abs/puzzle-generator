@@ -1,14 +1,17 @@
 import React from 'react';
-import getStyle from '../../../helpers/getStyle';
+import Button from '../../Button';
 
 const Pause = (context) => {
 	const { actions, state: { pause }} = context;
 
 	return (
-		<button
-			className="gameButton"
-			style={ getStyle({ ...context, data: 'pause' }) }
-			onClick={ () => { actions.setPause(!pause); } }
+		<Button { ...{
+			...context,
+			data: {
+				name: 'pause',
+				onClick: () => actions.setPause(!pause),
+			},
+		} }
 		/>);
 };
 
