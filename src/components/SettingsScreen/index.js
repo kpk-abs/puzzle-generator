@@ -1,6 +1,5 @@
 import React from 'react';
 import Themes from './Themes';
-import BackButton from '../BackButton';
 import Button from '../Button';
 
 const musicIcon = {
@@ -27,6 +26,11 @@ const getButtonData = (context) => {
 			onClick: () => actions.setMusic(!music),
 			name: musicIcon,
 		},
+		{
+			className: 'back',
+			onClick: () => actions.setScreen('home'),
+			name: 'back',
+		},
 	];
 };
 
@@ -37,7 +41,6 @@ const SettingsScreen = (context) => <div>
 			{ ...{ ...context, data } }
 		/>)}
 	<Themes { ...context }/>
-	<BackButton { ...context }/>
 </div>;
 
 export default SettingsScreen;

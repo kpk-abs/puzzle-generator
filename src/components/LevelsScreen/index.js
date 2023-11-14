@@ -2,29 +2,52 @@ import { map, values } from '@laufire/utils/collection';
 import React from 'react';
 import Level from './Level';
 import levels from '../../data/levels';
-import BackButton from '../BackButton';
-import getStyle from '../../helpers/getStyle';
+import Button from '../Button';
 
-const LevelsScreen = (context) => {
-	const { state: { level }, actions } = context;
+const getBackButtonData = (context) => {
+	const { actions } = context;
 
-	const levelElements = <div>
+	return {
+		className: 'back',
+		onClick: () => actions.setScreen('home'),
+		name: 'back',
+	};
+};
+
+const getButtonData = (context) => {
+	const { actions, data: { name, label }} = context;
+
+	return [
+		{
+			name: 'level',
+			onClick: () => actions.setLevel(name),
+			children: label,
+		},
+	];
+};
+
+const LevelElements = (context) =>
+	<div>
 		<div className="levels">
 			<div className="levelContainer">
 				{values(map(levels, ({ label, name }) =>
-					<button
-						key={ name }
-						className="gameButton"
-						style={ getStyle({ ...context,
-							data: { value: 'level' }}) }
-						onClick={ () => { actions.setLevel(name); } }
-					>{ label }</button>))}
+					getButtonData({ ...context, data: { label, name }})
+						.map((data, i) =>
+							<Button
+								key={ i }
+								{ ...{ ...context, data } }
+							/>)))}
 			</div>
-		</div><BackButton { ...context }/></div>;
+		</div>
+		<Button { ...{ ...context, data: getBackButtonData(context) } }/>
+	</div>;
 
-	const levelComponent = <Level { ...context }/>;
+const LevelsScreen = (context) => {
+	const { state: { level }} = context;
 
-	return level.name ? levelComponent : levelElements;
+	return level.name
+		? <Level { ...context }/>
+		: <LevelElements { ...context }/>;
 };
 
 export default LevelsScreen;
