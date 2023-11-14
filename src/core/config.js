@@ -191,6 +191,30 @@ const config = {
 				height: 1,
 			},
 		},
+		{
+			name: 'home',
+			index: 64,
+			variance: {
+				width: 1,
+				height: 1,
+			},
+		},
+		{
+			name: 'restart',
+			index: 65,
+			variance: {
+				width: 1,
+				height: 1,
+			},
+		},
+		{
+			name: 'levels',
+			index: 66,
+			variance: {
+				width: 2,
+				height: 1,
+			},
+		},
 	],
 	data: {
 		levels,

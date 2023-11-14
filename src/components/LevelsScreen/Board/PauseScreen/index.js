@@ -1,16 +1,38 @@
+/* eslint-disable max-lines-per-function */
 import React from 'react';
-import Levels from './Levels';
-import RestartLevel from '../../RestartLevel';
-import Home from './Home';
-import Play from './Play';
+import Button from '../../../Button';
 
-const components = [Levels, RestartLevel, Home, Play];
+const getPauseButtonScreen = (context) => {
+	const { actions, state: { level: { name }, pause }} = context;
+
+	return [
+		{
+			name: 'levels',
+			onClick: () => actions.setLevel(''),
+		},
+		{
+			name: 'restart',
+			onClick: () => actions.setLevel(name),
+		},
+		{
+			name: 'home',
+			onClick: () => {
+				actions.setScreen('home');
+				actions.setLevel('');
+			},
+		},
+		{
+			name: 'play',
+			onClick: () => actions.setPause(!pause),
+		},
+	];
+};
 
 const PauseContainer = (context) =>
 	<div className="pauseContainer">
 		{
-			components.map((Component, i) =>
-				<Component key={ i } { ...context }/>)
+			getPauseButtonScreen(context).map((data, i) =>
+				<Button key={ i } { ...{ ...context, data } }/>)
 		}
 	</div>;
 

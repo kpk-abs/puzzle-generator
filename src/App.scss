@@ -5,6 +5,7 @@
 
 	button {
 		font-weight: bold;
+		font-size: xx-large;
 	}
 }
 
@@ -121,6 +122,7 @@
 
 	.pauseContainer {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		height: 100%;
