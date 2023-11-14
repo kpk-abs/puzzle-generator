@@ -32,6 +32,7 @@ const BoardContainer = (context) => {
 				height: `calc(100dvh * ${ height })`,
 			} }
 		>
+			<Pause { ...context }/>
 			<BoardItems { ...context }/>
 		</div>
 	);
@@ -42,7 +43,6 @@ const Board = (context) =>
 		className="board"
 		style={ { background: `url(${ background })` } }
 	>
-		<Pause { ...context }/>
 		<PauseScreen { ...context }/>
 		<BoardContainer { ...context }/>
 	</div>;
