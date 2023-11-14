@@ -28,13 +28,21 @@ const getPauseButtonScreen = (context) => {
 	];
 };
 
-const PauseContainer = (context) =>
-	<div className="pauseContainer">
-		{
-			getPauseButtonScreen(context).map((data, i) =>
-				<Button key={ i } { ...{ ...context, data } }/>)
-		}
-	</div>;
+const PauseContainer = (context) => {
+	const { actions, state: { pause }} = context;
+
+	return (
+		<div
+			className="pauseContainer"
+			onClick={ () => actions.setPause(!pause) }
+		>
+			{
+				getPauseButtonScreen(context).map((data, i) =>
+					<Button key={ i } { ...{ ...context, data } }/>)
+			}
+		</div>
+	);
+};
 
 const PauseScreen = (context) => {
 	const { state: { pause }} = context;
