@@ -17,7 +17,7 @@ const getButtonData = (context) => {
 };
 
 const HomeScreen = (context) =>
-	<div>
+	<div className="homeScreen">
 		{getButtonData(context).map((data, i) =>
 			<Button
 				key={ i }
