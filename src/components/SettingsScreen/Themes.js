@@ -1,18 +1,24 @@
 import React from 'react';
-import Select from 'react-web-components/Select';
 
 const Themes = (context) => {
 	const { state: { theme }, actions, config: { themes }} = context;
+
 	const onChange = ({ target: { value }}) => actions.setTheme(value);
 
-	return <div>
-		<Select { ...{
-			value: theme,
-			options: themes,
-			onChange: onChange,
-		} }
-		/>
-	</div>;
+	return (
+		<div className="themes">Themes:
+			{themes.map((themeOption) =>
+				<label key={ themeOption.value }>
+					<input
+						type="radio"
+						value={ themeOption.value }
+						checked={ theme === themeOption.value }
+						onChange={ onChange }
+					/>
+					{themeOption.label}
+				</label>)}
+		</div>
+	);
 };
 
 export default Themes;
