@@ -1,13 +1,11 @@
-const onChange = (
-	event, context, dragAudio
-) => {
-	const { setState, state: { audioStatus }} = context;
+const onChange = (context) => {
+	const { setState, state: { audioStatus }, event, data } = context;
 	const { target } = event;
 
 	target.value.status === 'ended' && setState((prev) => ({ ...prev,
 		audioStatus: {
 			...audioStatus,
-			[dragAudio]: 'ready',
+			[data]: 'ready',
 		}}));
 };
 const playAudio = (context) => {

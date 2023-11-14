@@ -7,6 +7,7 @@ import MediaPlayer from 'react-web-components/MediaPlayer';
 import dragAudio from '../../assets/drag1.mp3';
 import Line from './Line';
 import audioManager from '../../helpers/audioManager';
+
 const tiles = {
 	image: Item,
 	number: Number,
@@ -15,21 +16,27 @@ const tiles = {
 	line: Line,
 };
 
+const getValue = ({ state: { audioStatus, audio }}) => ({
+	...audioManager.staticProps,
+	muted: !audio,
+	url: dragAudio,
+	status: audioStatus.dragAudio,
+});
+
 const Tile = (context) => {
-	const { data: { variation = 'number' },
-		state: { audioStatus, audio }} = context;
+	const { data: { variation = 'number' }} = context;
 	const Component = tiles[variation];
-	const value = { ...audioManager.staticProps,
-		muted: !audio, url: dragAudio, status: audioStatus[dragAudio] };
-	const onChange = (event) => audioManager.onChange(
-		event, context, dragAudio
-	);
+
+	const value = getValue(context);
+
+	const onChange = (event) =>
+		audioManager.onChange({ ...context, event: event, data: 'dragAudio' });
 
 	return (
 		<div
 			className="tile"
 			onMouseDown={ () =>
-				audioManager.playAudio({ ...context, data: dragAudio }) }
+				audioManager.playAudio({ ...context, data: 'dragAudio' }) }
 		>
 			<Component { ...context }/>
 			<MediaPlayer { ...{ value, onChange } }/>
