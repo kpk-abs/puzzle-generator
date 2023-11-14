@@ -5,6 +5,8 @@ import { Backdrop } from '@mui/material';
 import Home from './Home';
 import Play from './Play';
 
+const components = [Levels, RestartLevel, Home, Play];
+
 const PauseScreen = (context) => {
 	const { actions, state: { pause }} = context;
 
@@ -14,10 +16,8 @@ const PauseScreen = (context) => {
 			sx={ { zIndex: (theme) => theme.zIndex.drawer + 1 } }
 			onClick={ () => actions.setPause(!pause) }
 		>
-			<Levels { ...context }/>
-			<RestartLevel { ...context }/>
-			<Home { ...context }/>
-			<Play { ...context }/>
+			{components.map((Component, i) =>
+				<Component key={ i }{ ...context }/>)}
 		</Backdrop>
 	);
 };
