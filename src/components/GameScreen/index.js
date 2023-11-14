@@ -1,19 +1,22 @@
 import React from 'react';
 import LevelsScreen from '../LevelsScreen';
 import HomeScreen from '../HomeScreen';
-import SettingScreen from '../SettingScreen';
+import SettingsScreen from '../SettingsScreen';
 
 const screens = {
 	levels: LevelsScreen,
 	home: HomeScreen,
-	setting: SettingScreen,
+	setting: SettingsScreen,
 };
 
 const GameScreen = (context) => {
 	const { state: { screen }} = context;
 	const Screen = screens[screen];
 
-	return <div className="gameScreen"><Screen { ...context }/></div>;
+	return (
+		<div className="gameScreen">
+			<Screen { ...context }/>
+		</div>);
 };
 
 export default GameScreen;

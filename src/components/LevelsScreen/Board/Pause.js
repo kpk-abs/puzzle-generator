@@ -1,7 +1,15 @@
-import { PauseOutlined } from '@mui/icons-material';
 import React from 'react';
+import getStyle from '../../../helpers/getStyle';
 
-const Pause = ({ actions, state: { pause }}) =>
-	<PauseOutlined onClick={ () => { actions.setPause(!pause); } }/>;
+const Pause = (context) => {
+	const { actions, state: { pause }} = context;
+
+	return (
+		<button
+			className="gameButton"
+			style={ getStyle({ ...context, data: 'pause' }) }
+			onClick={ () => { actions.setPause(!pause); } }
+		/>);
+};
 
 export default Pause;
