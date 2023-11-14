@@ -152,7 +152,7 @@ const config = {
 			},
 		},
 		{
-			name: 'setting',
+			name: 'settings',
 			index: 59,
 			variance: {
 				width: 1,

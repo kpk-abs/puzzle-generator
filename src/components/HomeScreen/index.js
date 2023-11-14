@@ -10,8 +10,8 @@ const getButtonData = (context) => {
 			onClick: () => actions.setScreen('levels'),
 		},
 		{
-			name: 'setting',
-			onClick: () => actions.setScreen('setting'),
+			name: 'settings',
+			onClick: () => actions.setScreen('settings'),
 		},
 	];
 };
