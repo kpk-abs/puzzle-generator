@@ -2,7 +2,8 @@ import React from 'react';
 import getStyle from '../helpers/getStyle';
 
 const Button = (context) => {
-	const { actions, data: { type, action, name }} = context;
+	const { data: { type = '', name, onClick }} = context;
+	const value = name[type] || name;
 
 	return (
 		<button { ...{
@@ -10,10 +11,10 @@ const Button = (context) => {
 			style: {
 				...getStyle({
 					...context,
-					data: { value: name[type] },
+					data: { value },
 				}),
 			},
-			onClick: () => { actions[action](!type); },
+			onClick: onClick,
 		} }
 		/>);
 };

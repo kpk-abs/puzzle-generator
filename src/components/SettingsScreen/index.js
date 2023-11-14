@@ -14,27 +14,27 @@ const audioIcon = {
 };
 
 const getButtonData = (context) => {
-	const { state: { audio, music }} = context;
+	const { state: { audio, music }, actions } = context;
 
 	return [
 		{
 			type: audio,
-			action: 'setAudio',
+			onClick: () => actions.setAudio(!audio),
 			name: audioIcon,
 		},
 		{
 			type: music,
-			action: 'setMusic',
+			onClick: () => actions.setMusic(!music),
 			name: musicIcon,
 		},
 	];
 };
 
 const SettingsScreen = (context) => <div>
-	{getButtonData(context).map((ele, i) =>
+	{getButtonData(context).map((data, i) =>
 		<Button
 			key={ i }
-			{ ...{ ...context, data: ele } }
+			{ ...{ ...context, data } }
 		/>)}
 	<Themes { ...context }/>
 	<BackButton { ...context }/>
