@@ -1,6 +1,8 @@
 import levels from '../data/levels';
 import kids from '../Images/sprite.png';
 import cartoon from '../Images/cartoon.png';
+import light from '../Images/light.png';
+import dark from '../Images/dark.jpg';
 
 const width = 16;
 const height = 9;
@@ -231,6 +233,10 @@ const config = {
 			url: cartoon,
 		},
 	],
+	background: {
+		kids: dark,
+		cartoon: light,
+	},
 };
 
 export default config;

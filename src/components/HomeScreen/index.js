@@ -16,13 +16,20 @@ const getButtonData = (context) => {
 	];
 };
 
-const HomeScreen = (context) =>
-	<div className="homeScreen">
-		{getButtonData(context).map((data, i) =>
-			<Button
-				key={ i }
-				{ ...{ ...context, data } }
-			/>)}
-	</div>;
+const HomeScreen = (context) => {
+	const { config: { background }, state: { theme }} = context;
+
+	return (
+		<div
+			className="homeScreen"
+			style={ { backgroundImage: `url(${ background[theme] })` } }
+		>
+			{getButtonData(context).map((data, i) =>
+				<Button
+					key={ i }
+					{ ...{ ...context, data } }
+				/>)}
+		</div>);
+};
 
 export default HomeScreen;

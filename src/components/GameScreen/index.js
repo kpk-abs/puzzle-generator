@@ -10,11 +10,14 @@ const screens = {
 };
 
 const GameScreen = (context) => {
-	const { state: { screen }} = context;
+	const { state: { screen, theme }, config: { background }} = context;
 	const Screen = screens[screen];
 
 	return (
-		<div className="gameScreen">
+		<div
+			className="gameScreen"
+			style={ { backgroundImage: `url(${ background[theme] })` } }
+		>
 			<Screen { ...context }/>
 		</div>);
 };
