@@ -3,6 +3,10 @@ const levels = {
 		label: 1,
 		name: 'level1',
 		type: 'stack',
+		time: {
+			availableTime: 30,
+			elapsedTime: 0,
+		},
 		items: {
 			tile: {
 				count: 1,
@@ -21,6 +25,10 @@ const levels = {
 		label: 2,
 		name: 'level2',
 		type: 'stack',
+		time: {
+			availableTime: 30,
+			elapsedTime: 0,
+		},
 		items: {
 			tile: {
 				count: 2,
