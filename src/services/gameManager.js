@@ -5,11 +5,12 @@ import { truthy } from '@laufire/utils/predicates';
 
 const gameManager = {
 	getLevel: ({ data: name }) => {
-		const { data = [] } = name && generateLevel(name);
+		const { data = [], time } = name && generateLevel(name);
 
 		return {
 			name,
 			data,
+			time,
 		};
 	},
 

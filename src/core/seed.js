@@ -4,6 +4,7 @@ const seed = {
 	level: {
 		name: '',
 		data: [],
+		time: {},
 	},
 	screen: 'home',
 	theme: config.themes[0].value,

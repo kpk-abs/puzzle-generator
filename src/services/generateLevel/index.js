@@ -7,9 +7,9 @@ const actions = {
 
 const generateLevel = (levelName) => {
 	const { data: { levels }} = config;
-	const { type, items } = levels[levelName];
+	const { type, items, time } = levels[levelName];
 
-	return actions[type](items);
+	return { ...actions[type](items), time };
 };
 
 export default generateLevel;
