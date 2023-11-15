@@ -8,7 +8,7 @@ const component = {
 	argTypes: {
 		variation: {
 			type: 'select', options: [
-				'image', 'audio', 'dice', 'number', 'line',
+				'image', 'audio', 'dice', 'number', 'line', 'numberAndImage',
 			],
 		},
 	},

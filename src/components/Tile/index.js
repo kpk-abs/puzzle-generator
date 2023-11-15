@@ -7,6 +7,7 @@ import MediaPlayer from 'react-web-components/MediaPlayer';
 import dragAudio from '../../assets/drag1.mp3';
 import Line from './Line';
 import audioManager from '../../helpers/audioManager';
+import NumberAndItem from './NumberAndItem';
 
 const tiles = {
 	image: Item,
@@ -14,6 +15,7 @@ const tiles = {
 	audio: Audio,
 	dice: Dice,
 	line: Line,
+	numberAndImage: NumberAndItem,
 };
 
 const getValue = ({ state: { audioStatus, audio }}) => ({
