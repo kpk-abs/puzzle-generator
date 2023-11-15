@@ -5,6 +5,10 @@ const actions = {
 		level: gameManager.getLevel(context),
 	}),
 
+	reduceTime: (context) => ({
+		level: gameManager.reduceTime(context),
+	}),
+
 	setScreen: ({ data }) => ({
 		screen: data,
 	}),

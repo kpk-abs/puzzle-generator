@@ -14,6 +14,21 @@ const gameManager = {
 		};
 	},
 
+	reduceTime: ({ state: { level }}) => {
+		const { time } = level;
+		const { elapsedTime, availableTime } = time;
+
+		return {
+			...level,
+			time: {
+				availableTime: availableTime,
+				elapsedTime: availableTime && elapsedTime < availableTime
+					? elapsedTime + 1
+					: elapsedTime,
+			},
+		};
+	},
+
 	getNextLevel: (context) => {
 		const { state: { level: { name }}} = context;
 		const incremented = name.replace(/(\d+)$/, (match, number) =>

@@ -1,4 +1,5 @@
 const masterLoops = [
+	'reduceTime',
 ];
 
 const runMasterLoop = (context) =>
