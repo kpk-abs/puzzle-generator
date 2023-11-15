@@ -1,7 +1,7 @@
 import { converter, SYSTEM } from '@kushalst/numbers-to-words-converter';
 import { reduce } from '@laufire/utils/collection';
 
-const convertNumberToWords = ({ number, type }) =>
+const convertNumberToWords = ({ number, type = 'lnc' }) =>
 	converter.toWords(number, SYSTEM[type]).replace(/-/g, ' ');
 
 const convertAmountToWords = ({ value, system = 'lnc' }) => {
