@@ -26,6 +26,19 @@ const gameManager = {
 			isNextLevel: truthy(levelData),
 		};
 	},
+	updateDropItem: (context) => {
+		const { state: { level }, data } = context;
+		const { drag, drop } = data;
+		const filteredData = level.data.filter((e) => e.id !== drag.id);
+		const res = filteredData.map((element) => (drop.id === element.id
+			? {
+				...element,
+				items: [...element.items, drag],
+			}
+			: element));
+
+		return { ...level, data: res };
+	},
 };
 
 export default gameManager;

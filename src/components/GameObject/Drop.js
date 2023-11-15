@@ -1,16 +1,13 @@
-import { peek } from '@laufire/utils/debug';
 import React from 'react';
 import { useDrop } from 'react-dnd';
+import context from '../../core/context';
 
-const Drop = ({ children, acceptType, item: drop }) => {
-	const [{ isOver }, dropRef] = useDrop({
+const Drop = ({ children, acceptType, item: drop = {}}) => {
+	const [, dropRef] = useDrop({
 		accept: acceptType,
 		drop: (drag) => {
-			peek({ drag, drop });
+			context.actions.handleDrop({ drag, drop });
 		},
-		collect: (monitor) => ({
-			isOver: !!monitor.isOver(),
-		}),
 	});
 
 	return <div ref={ dropRef } className="gameObject">{children}</div>;

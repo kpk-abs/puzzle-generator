@@ -24,6 +24,10 @@ const actions = {
 	setPause: ({ data }) => ({
 		pause: data,
 	}),
+
+	handleDrop: (context) => ({
+		level: gameManager.updateDropItem(context),
+	}),
 };
 
 export default actions;
