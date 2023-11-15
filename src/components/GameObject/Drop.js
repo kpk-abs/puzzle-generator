@@ -13,7 +13,7 @@ const Drop = ({ children, acceptType, item: drop }) => {
 		}),
 	});
 
-	return <div ref={ dropRef }>{children}</div>;
+	return <div ref={ dropRef } className="gameObject">{children}</div>;
 };
 
 export default Drop;
